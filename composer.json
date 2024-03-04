@@ -1,0 +1,58 @@
+{
+    "name": "jobmetric/laravel-api-wrapper",
+    "description": "Use this package in your packages and build your api output in the best way.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "jobmetric",
+        "package",
+        "api",
+        "wrapper",
+        "output",
+        "response",
+        "json"
+    ],
+    "homepage": "https://doc.jobmetric.net/package/laravel-api-wrapper",
+    "authors": [
+        {
+            "name": "Majid Mohammadian",
+            "email": "majeedmohammadian@gmail.com",
+            "homepage": "https://www.linkedin.com/in/majidmohammadian/",
+            "role": "Full Stack Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.1",
+        "laravel/framework": ">=9.19",
+        "jobmetric/laravel-package-core": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.1"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "JobMetric\\ApiWrapper\\": "src/",
+            "JobMetric\\ApiWrapper\\Factories\\": "database/factories/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JobMetric\\ApiWrapper\\ApiWrapperServiceProvider"
+            ],
+            "aliases": {
+                "BanIp": "JobMetric\\ApiWrapper\\Facades\\ApiWrapper"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "support": {
+        "issues": "https://github.com/jobmetric/laravel-api-wrapper/issues",
+        "forum": "https://twitter.com/jobmetric",
+        "source": "https://github.com/jobmetric/laravel-api-wrapper"
+    }
+}
