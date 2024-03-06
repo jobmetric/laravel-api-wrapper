@@ -2,7 +2,6 @@
 
 namespace src;
 
-use JobMetric\PackageCore\Exceptions\MigrationFolderNotFoundException;
 use JobMetric\PackageCore\Exceptions\RegisterClassTypeNotFoundException;
 use JobMetric\PackageCore\PackageCore;
 use JobMetric\PackageCore\PackageCoreServiceProvider;
@@ -19,7 +18,6 @@ class ApiWrapperServiceProvider extends PackageCoreServiceProvider
     {
         $package->name('laravel-api-wrapper')
             ->hasConfig()
-            ->hasTranslation()
             ->registerClass('ApiWrapper', ApiWrapper::class);
     }
 }
